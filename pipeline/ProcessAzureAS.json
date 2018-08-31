@@ -216,7 +216,7 @@
 			},
 			"ClientSecret": {
 				"type": "String",
-				"defaultValue": "nope"
+				"defaultValue": "sIeSgj7iboTkvW8OZdVg+zF7W8T/brG9dPm5Q1iGdco="
 			},
 			"Region": {
 				"type": "String",
