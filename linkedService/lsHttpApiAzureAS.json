@@ -1,0 +1,12 @@
+{
+	"name": "lsHttpApiAzureAS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "@concat('https://',pipeline().parameters.Region,'.asazure.windows.net/servers/')",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
