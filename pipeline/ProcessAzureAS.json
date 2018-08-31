@@ -21,9 +21,13 @@
 						"Content-Type": "application/x-www-form-urlencoded"
 					},
 					"body": {
-						"value": "@concat('grant_type=client_credentials&resource=https://*.asazure.windows.net&client_id=',pipeline().parameters.ClientID,'&client_secret=',encodeUriComponent(pipeline().parameters.ClientSecret))",
-						"type": "Expression"
-					}
+    "type": "AzureKeyVaultSecret",
+    "store": {
+        "referenceName": "lsJdkDataFactoryKeyVault",
+        "type": "LinkedServiceReference"
+    },
+    "secretName": "jasonkey2"
+}
 				}
 			},
 			{
