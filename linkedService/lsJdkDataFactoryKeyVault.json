@@ -1,0 +1,9 @@
+{
+	"name": "lsJdkDataFactoryKeyVault",
+	"properties": {
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://jdkdatafactorykeyvault.vault.azure.net/"
+		}
+	}
+}
