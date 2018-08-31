@@ -27,13 +27,7 @@
 							"type": "LinkedServiceReference"
 						},
 						"secretName": "jasonkey2"
-					},
-					"linkedServices": [
-						{
-							"referenceName": "lsJdkDataFactoryKeyVault",
-							"type": "LinkedServiceReference"
-						}
-					]
+					}
 				}
 			},
 			{
