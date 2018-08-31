@@ -1,12 +1,21 @@
 {
 	"name": "lsHttpApiAzureAS",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"type": "HttpServer",
 		"typeProperties": {
 			"url": "@concat('https://',pipeline().parameters.Region,'.asazure.windows.net/servers/')",
 			"enableServerCertificateValidation": true,
-			"authenticationType": "Anonymous"
+			"authenticationType": "Basic",
+			"userName": "me",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "lsJdkDataFactoryKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "jasonkey"
+			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
