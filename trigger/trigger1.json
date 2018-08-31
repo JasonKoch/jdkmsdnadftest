@@ -1,0 +1,20 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"runtimeState": "Stopped",
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2018-08-31T16:14:06.587Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"hours": [
+						0
+					]
+				}
+			}
+		}
+	}
+}
