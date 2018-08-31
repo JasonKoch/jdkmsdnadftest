@@ -13,7 +13,7 @@
 				},
 				"typeProperties": {
 					"url": {
-						"value": "@concat('https://login.microsoftonline.com/',pipeline().parameters.TenantID,'/oauth2/token')",
+						"value": "http://requestbin.fullcontact.com/1k9kgm91",
 						"type": "Expression"
 					},
 					"method": "POST",
@@ -21,19 +21,14 @@
 						"Content-Type": "application/x-www-form-urlencoded"
 					},
 					"body": {
-						"type": "AzureKeyVaultSecret",
-						"store": {
-							"referenceName": "lsJdkDataFactoryKeyVault",
-							"type": "LinkedServiceReference"
-						},
-						"secretName": "jasonkey2"
-					},
-					"linkedServices": [
-						{
-							"referenceName": "lsJdkDataFactoryKeyVault",
-							"type": "LinkedServiceReference"
-						}
-					]
+						"myMessage": "hello world",
+						"linkedServices": [
+							{
+								"referenceName": "lsJdkDataFactoryKeyVault",
+								"type": "LinkedServiceReference"
+							}
+						]
+					}
 				}
 			},
 			{
