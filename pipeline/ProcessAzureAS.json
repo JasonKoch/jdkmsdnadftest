@@ -15,13 +15,13 @@
 					{
 						"name": "UserProp01",
 						"value": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "lsJdkDataFactoryKeyVault",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "jasonkey2"
-			}
+							"type": "AzureKeyVaultSecret",
+							"store": {
+								"referenceName": "lsJdkDataFactoryKeyVault",
+								"type": "LinkedServiceReference"
+							},
+							"secretName": "jasonkey2"
+						}
 					}
 				],
 				"typeProperties": {
@@ -37,12 +37,12 @@
 						"value": "@concat('grant_type=client_credentials&resource=https://*.asazure.windows.net&client_id=',pipeline().parameters.ClientID,'&client_secret=',encodeUriComponent(pipeline().parameters.ClientSecret))",
 						"type": "Expression"
 					},
-					"linkedServices": [
-						{
+					"linkedServices": {
+						"0": {
 							"referenceName": "lsJdkDataFactoryKeyVault",
 							"type": "LinkedServiceReference"
 						}
-					]
+					}
 				}
 			},
 			{
