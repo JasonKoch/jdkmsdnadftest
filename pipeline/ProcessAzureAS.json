@@ -29,7 +29,13 @@
 					"body": {
 						"value": "@concat('grant_type=client_credentials&resource=https://*.asazure.windows.net&client_id=',pipeline().parameters.ClientID,'&client_secret=',encodeUriComponent(pipeline().parameters.ClientSecret))",
 						"type": "Expression"
-					}
+					},
+					"linkedServices": [
+						{
+							"referenceName": "lsJdkDataFactoryKeyVault",
+							"type": "LinkedServiceReference"
+						}
+					]
 				}
 			},
 			{
