@@ -7,6 +7,9 @@
 				"pipelineReference": {
 					"referenceName": "ProcessAzureAS",
 					"type": "PipelineReference"
+				},
+				"parameters": {
+					"TenantID": "jdksearchval"
 				}
 			}
 		],
